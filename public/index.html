@@ -1,83 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="compiled_styles.css" />
-    <style>
-      body {
-        font-family: Helvetica, sans-serif;
-        margin: 0;
-        padding: none;
-        background-color: black;
-        /* Disable browser panning and zooming gestures. For example, double tap on mobile. */
-        touch-action: none;
-      }
-
-      canvas.emscripten {
-        border: 0 none;
-        background-color: #000;
-        outline: 0;
-      }
-
-      #loading_bar_container {
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      #webgl_unsupported_popup {
-        background-image: linear-gradient(to right, red, orange);
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 15px;
-        display: none;
-        z-index: 1000;
-      }
-
-      #mainMenuModal {
-        z-index: 2000;
-      }
-
-      #controlsModal {
-        z-index: 2000;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Game</title>
+    <script type="module" crossorigin src="/assets/index-9741ba78.js"></script>
+    <link rel="stylesheet" href="/assets/index-1185dc70.css">
   </head>
-
-  <body class="h-screen w-screen">
-    <div id="loading_container" class="absolute w-screen h-screen">
-      <div
-        id="loading_background_container"
-        class="absolute w-screen h-screen bg-cover bg-center z-10"
-      ></div>
-      <div id="loading_bar_container" class="z-20 flex flex-col items-center">
-        <div class="spinner" id="spinner"></div>
-        <div id="status" class="animate-pulse text-center">Downloading...</div>
-        <div class="emscripten">
-          <progress hidden id="progress" max="100" value="0"></progress>
-        </div>
-      </div>
-    </div>
-
-    <div id="webgl_unsupported_popup">
-      Sorry! Your browser doesn't support WebGL 2.0 - Please use the latest
-      version of Chrome, Firefox or Safari.
-    </div>
-
-    <div id="canvas_container" class="w-screen h-screen">
-      <canvas
-        class="emscripten"
-        id="canvas"
-        oncontextmenu="event.preventDefault()"
-        tabindex="-1"
-      ></canvas>
-    </div>
-
-    <!-- <textarea id=output rows=8></textarea> -->
-    <script src="client_bundle.js"></script>
+  <body>
+    <div id="root"></div>
+    
+    <script src="Simple-Game-Client.js"></script>
   </body>
 </html>
